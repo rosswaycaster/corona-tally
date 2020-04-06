@@ -7,10 +7,24 @@
     "start": "next start"
   },
   "dependencies": {
+    "axios": "^0.19.2",
+    "classnames": "^2.2.6",
+    "comma-number": "^2.0.1",
+    "csvtojson": "^2.0.10",
+    "history": "^4.10.1",
+    "lodash": "^4.17.15",
     "next": "latest",
-    "node-fetch": "2.6.0",
+    "next-ga": "^2.3.4",
+    "ordinal": "^1.0.3",
     "react": "^16.8.6",
-    "react-dom": "^16.8.6"
+    "react-dom": "^16.8.6",
+    "react-ga": "^2.7.0",
+    "react-router-dom": "^5.1.2",
+    "styled-components": "^5.0.1",
+    "tachyons": "^4.11.1"
   },
-  "license": "ISC"
+  "license": "ISC",
+  "devDependencies": {
+    "babel-plugin-styled-components": "^1.10.7"
+  }
 }

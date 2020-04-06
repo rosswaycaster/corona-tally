@@ -1,19 +1,20 @@
-import Person from '../components/Person'
-import fetch from 'node-fetch'
+import useFetchData from '../hooks/useFetchData'
+import Logo from '../components/Logo'
+import WorldStats from '../components/WorldStats'
+import CountryStats from '../components/CountryStats'
+import Footer from '../components/Footer'
 
-const Index = ({ people }) => (
-  <ul>
-    {people.map((p, i) => (
-      <Person key={i} person={p} />
-    ))}
-  </ul>
-)
+const HomePage = () => {
+  const data = useFetchData()
 
-export async function getServerSideProps() {
-  const response = await fetch('http://localhost:3000/api/people')
-  const people = await response.json()
-
-  return { props: { people } }
+  return (
+    <>
+      <Logo />
+      <WorldStats data={data.world} />
+      <CountryStats data={data.countries} />
+      <Footer />
+    </>
+  )
 }
 
-export default Index
+export default HomePage
